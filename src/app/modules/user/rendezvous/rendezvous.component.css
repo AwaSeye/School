@@ -1,0 +1,56 @@
+#principal
+{
+  height: 665px;
+  width: 1535px;
+
+}
+
+#container
+{
+  height: 665px;
+  width: 1535px;
+  float: left;
+  background-image: url("../../../../assets/image/inscription.jpg");
+  background-size: 1530px;
+
+}
+form {
+  width:0px;
+  margin-top: 50px;
+  border: 1px;
+  background:white;
+  margin-left: 510px;
+}
+input, select
+{
+  width: 500px;
+  height: 50px;
+  margin-left: 40px;
+  display: inline-block;
+
+}
+input[type=submit]{
+  background-color:gray;
+  color: white;
+
+  border: none;
+  cursor: pointer;
+  width: 200px;
+}
+h1
+{
+  color: black;
+  margin-top: 50px;
+  margin-left: 580px;
+}
+
+label
+{
+  color: gray;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+#prenom,#nom
+{
+
+}

@@ -1,0 +1,26 @@
+.principal
+{
+  width: 1300px;
+  height: 630px;
+  margin-left: 50px;
+  border-style: double;
+  border-width: 6px;
+  border-color: silver;
+  margin-left: 120px;
+}
+
+form
+{
+
+  font-family: Times New Roman;
+  font-weight: bold;
+  color: #2F4F4F;
+  margin-right: 150px;
+  margin-top: 70px;
+}
+button{
+  font-size: larger;
+  background-color: silver;
+  font-family: Times New Roman;
+  font-weight: bold;
+}

@@ -1,0 +1,46 @@
+body
+{
+  width: 1535px;
+  height: 720px;
+  background-image: url("../../../../assets/image/image1.JPG");
+  background-size: 1500px;
+}
+
+.Partie2
+{
+  width: 1535px;
+  height: 720px;
+  float: left;
+}
+button
+{
+  height: 60px;
+  width: 500px;
+  display: flex;
+  font-size: 30px;
+  font-style: italic;
+  font-family: Times New Roman;
+  background-color: darkred;
+  color: white;
+  transform: skewX(15deg);
+  margin-left: 25px;
+
+}
+p
+{
+  margin-left: 25px;
+  margin-top: 80px;
+  font-size: 30px;
+  color: white;
+  font-family: Times New Roman;
+  font-weight: bold;
+}
+h1
+{
+  font-size: 50px;
+  margin-left: 80px;
+  margin-top: 80px;
+  color: white;
+  font-family: Times New Roman;
+  font-weight: bolder;
+}

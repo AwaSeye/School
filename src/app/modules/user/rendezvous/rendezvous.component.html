@@ -1,0 +1,51 @@
+<body>
+<div id="principal">
+
+  <div id="container">
+    <h1>Prendre Un Rendez-vous</h1>
+    <form class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="nom">Nom:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nom" placeholder="Entrer Nom">
+          </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="prenom">Prenom:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="prenom" placeholder="Entrer Prenom">
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="mail">Mail:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="mail" placeholder="Entrer Mail">
+            </div>
+          </div>
+            <div>
+              <label>Etablissement:</label><br>
+              <select name="etablissement">
+                <option value="">--Choissir un etablissement--</option>
+                <option value="ESP">ESP</option>
+                <option value="ISI">ISI</option>
+                <option value="ISM">ISM</option>
+                <option value="UCAO">UCAO</option>
+              </select><br>
+            </div>
+            <div>
+              <label>Cycle:</label><br>
+              <select name="cycle">
+                <option value="">--Choisir Votre niveau--</option>
+                <option value="licence1">Licence 1</option>
+                <option value="licence2">Licence 2</option>
+                <option value="licence3">Licence 3</option>
+                <option value="master1">Master 1</option>
+                <option value="master2">Master 2</option>
+              </select>
+            </div>
+            <input type="submit" id="submit" value='ENVOYER'>
+        </div>
+        </div>
+    </form>
+
+  </div>
+</div>
+</body>

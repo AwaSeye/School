@@ -1,0 +1,33 @@
+.principal
+{
+  width: 1533px;
+  height: 720px;
+}
+
+.corps
+{
+  width: 1533px;
+  height:720px;
+  float: left;
+  background-image: url("../../../../assets/image/etudiante.JPG");
+}
+
+.slogan
+{
+  margin-left: 230px;
+  font-size: 170px;
+  color: white;
+  margin-top: 190px;
+  font-family: "Edwardian Script ITC";
+  transform: skewX(1deg);
+  font-weight: bolder;
+}
+
+.slogan1
+{
+  margin-left: 300px;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+

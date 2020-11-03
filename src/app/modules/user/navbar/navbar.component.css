@@ -1,0 +1,27 @@
+nav
+{
+  background: rgb(76,49,29) ;
+  opacity: 0.45;
+  border-color: #af8d78;
+}
+
+a:hover
+{
+  color:green;text-decoration: underline;
+}
+a
+{
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bolder;
+  opacity: 8;
+}
+img
+{
+  opacity:5;
+  height: 50px;
+  width: 100px;
+}
+
+
