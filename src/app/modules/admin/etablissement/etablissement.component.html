@@ -1,32 +1,44 @@
-<mat-form-field>
-  <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-</mat-form-field>
-
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<!--<mat-form-field>-->
+  <!--<mat-label>Filter</mat-label>-->
+  <!--<input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>-->
+<!--</mat-form-field>-->
+<div>
+  <button mat-button (click)="openDialog()">Basic</button>
+</div>
+<div class="test">
+<table mat-table [dataSource]="source" class="mat-elevation-z8">
 
   <!-- Position Column -->
-  <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  <ng-container matColumnDef="nomEtablissement">
+    <th mat-header-cell *matHeaderCellDef> Nom </th>
+    <td mat-cell *matCellDef="let element"> {{element.nomEtablissement}} </td>
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  <ng-container matColumnDef="filiere">
+    <th mat-header-cell *matHeaderCellDef> Filiere </th>
+    <td mat-cell *matCellDef="let element"> {{element.filiere}} </td>
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
-    <th mat-header-cell *matHeaderCellDef> Weight </th>
-    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+  <ng-container matColumnDef="contact">
+    <th mat-header-cell *matHeaderCellDef> Contact </th>
+    <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
-    <th mat-header-cell *matHeaderCellDef> Symbol </th>
-    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+  <ng-container matColumnDef="adresse">
+    <th mat-header-cell *matHeaderCellDef> Adresse </th>
+    <td mat-cell *matCellDef="let element"> {{element.adresse}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+  <th mat-header-cell *matHeaderCellDef>Action </th>
+  <td mat-cell *matCellDef="let element" >
+    <mat-icon aria-hidden="false" style="color: orange" aria-label="Example home icon">edit</mat-icon>
+    <mat-icon style="margin-left: 15px; color: red" aria-hidden="false" aria-label="Example home icon">delete_outline</mat-icon>
+
+  </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -38,3 +50,4 @@
     <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
   </tr>
 </table>
+</div>

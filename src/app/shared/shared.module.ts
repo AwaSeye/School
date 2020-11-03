@@ -6,6 +6,7 @@ import {MatOptionModule} from '@angular/material/core';
 import {MatInput, MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -19,6 +20,7 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatTableModule,
     MatCardModule,
+    MatDialogModule,
 
 
   ],
@@ -29,6 +31,7 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatTableModule,
     MatCardModule,
+    MatDialogModule,
   ]
 })
 export class SharedModule { }
