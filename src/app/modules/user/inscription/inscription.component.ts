@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ApiService} from '../../../_services/api.service';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-inscription',
@@ -8,7 +11,10 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class InscriptionComponent implements OnInit {
   inscriptionForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
+  url = "etudiant";
+  constructor(private formBuilder: FormBuilder,
+              private  apiService: ApiService,
+              private router: Router ) { }
 
   ngOnInit(): void {
     this.inscriptionForm = this.formBuilder.group({
@@ -22,7 +28,20 @@ export class InscriptionComponent implements OnInit {
   }
 
   onSubmit(){
-    if (this.inscriptionForm.invalid)
+    if (this.inscriptionForm.invalid){
+      return;
+    }
+    this.apiService.saveData(this.url, this.inscriptionForm.value)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.router.navigateByUrl('connexion');
+        },
+        error => {
+          console.log(error)
+        }
+      )
+
   }
 
 }

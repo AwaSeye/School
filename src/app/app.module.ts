@@ -25,13 +25,15 @@ import {AuthentificationService} from './_services/authentification.service';
 import {ApiService} from './_services/api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SharedModule} from './shared/shared.module';
+import { EtablissementComponent } from './modules/admin/etablissement/etablissement.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConnexionComponent
+    ConnexionComponent,
+
   ],
   imports: [
     BrowserModule,

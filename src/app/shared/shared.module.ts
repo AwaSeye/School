@@ -4,6 +4,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatOptionModule} from '@angular/material/core';
 import {MatInput, MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -15,6 +17,8 @@ import {MatInput, MatInputModule} from '@angular/material/input';
     MatSelectModule,
     MatOptionModule,
     MatInputModule,
+    MatTableModule,
+    MatCardModule,
 
 
   ],
@@ -23,6 +27,8 @@ import {MatInput, MatInputModule} from '@angular/material/input';
     MatSelectModule,
     MatOptionModule,
     MatInputModule,
+    MatTableModule,
+    MatCardModule,
   ]
 })
 export class SharedModule { }
