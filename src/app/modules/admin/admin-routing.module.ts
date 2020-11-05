@@ -5,7 +5,7 @@ import {EtablissementComponent} from './etablissement/etablissement.component';
 
 const routes: Routes = [
   {path: '' , component: AccueilAdministrateurComponent},
-  {path: 'etablissement', component: EtablissementComponent }
+  {path: 'etablissement', component: EtablissementComponent}
 ];
 
 @NgModule({

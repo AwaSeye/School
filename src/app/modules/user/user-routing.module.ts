@@ -9,9 +9,9 @@ import {InscriptionComponent} from './inscription/inscription.component';
 
 const routes: Routes = [
   {path: '' , component: AccueilComponent},
-  {path: 'critere' , component: RechercheCritereComponent,canActivate: [AuthGuard]},
-  {path: 'rendezvous' , component: RendezvousComponent, canActivate: [AuthGuard]},
-  {path: 'inscription' , component: InscriptionComponent, canActivate:[AuthGuard]}
+  {path: 'critere' , component: RechercheCritereComponent},
+  {path: 'rendezvous' , component: RendezvousComponent},
+  {path: 'inscription' , component: InscriptionComponent}
 ];
 
 @NgModule({

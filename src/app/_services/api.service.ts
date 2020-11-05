@@ -15,7 +15,7 @@ export class ApiService {
     return this.http.get(BASE_URL.api_url + url)
   }
 
-  saveData(url: string ,data: Object) :Observable<any> {
+  saveData(url: string ,data: any) :Observable<any> {
     return this.http.post(BASE_URL.api_url + url, data)
   }
 

@@ -1,7 +1,7 @@
 <mat-dialog-content>
   <mat-vertical-stepper #stepper>
   <mat-step [stepControl]="etablissementFormGroup">
-    <form [formGroup]="etablissementFormGroup">
+    <form [formGroup]="etablissementFormGroup" >
       <ng-template matStepLabel>Information Etablissement</ng-template>
 
       <div style="display: flex" class="row">
@@ -36,49 +36,88 @@
         </mat-form-field>
       </div>
       <div>
-        <button style="margin-top: 25px" mat-button matStepperNext>Next</button>
+        <button style="margin-top: 25px" mat-button matStepperNext>Suivant</button>
       </div>
     </form>
   </mat-step>
   <mat-step [stepControl]="filiereFormGroup">
-    <form [formGroup]="filiereFormGroup">
+    <form [formGroup]="filiereFormGroup" (ngSubmit)="addFilier()">
       <ng-template matStepLabel>Information Filiere</ng-template>
-      <mat-form-field>
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="nomFiliere" placeholder="Ex. 1 Main St, New York, NY"
-               required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="description" placeholder="Ex. 1 Main St, New York, NY"
-               required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="montantMensuel" placeholder="Ex. 1 Main St, New York, NY"
-               required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="cycle" placeholder="Ex. 1 Main St, New York, NY"
-               required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="fraisInscription" placeholder="Ex. 1 Main St, New York, NY"
-               required>
-      </mat-form-field>
+      <div class="row">
+        <div class="col-md-3">
+          <mat-form-field>
+            <mat-label>Nom Filiere</mat-label>
+            <input matInput formControlName="nomFiliere"
+                   required>
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field>
+            <mat-label>Montant Mensuel</mat-label>
+            <input type="number" matInput formControlName="montantMensuel"
+                   required>
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field>
+            <mat-label>Cycle</mat-label>
+            <mat-select formControlName="cycle" name="food">
+              <mat-option value="Licence">
+                Licence
+              </mat-option>
+              <mat-option value="Master">
+                Master
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field>
+            <mat-label>Frais D'inscription</mat-label>
+            <input type="number" matInput formControlName="fraisInscription"
+                   required>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <mat-form-field style="width: 500px">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description"
+                   required>
+            </textarea>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2">
+          <button mat-raised-button style="margin-top: 15px" type="submit">Add Filiere</button>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <table class="table table-striped">
+          <tbody>
+          <tr *ngFor="let filier of filieres">
+            <td>{{filier?.nomFiliere}}</td>
+            <td>{{filier?.cycle}}</td>
+            <td>{{filier?.fraisInscription}}</td>
+            <td>{{filier?.montantMensuel}}</td>
+            <td><mat-icon (click)="onDelete(filier)">delete</mat-icon></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperPrevious>Retour</button>
+        <button mat-button matStepperNext>Suivant</button>
       </div>
     </form>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
+    <ng-template matStepLabel>Terminer</ng-template>
+    <p>Vous avez Terminer La création d'un etablissement.</p>
     <div>
-      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperPrevious>Retour</button>
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
@@ -86,7 +125,7 @@
 
 </mat-dialog-content>
 
-<!--<mat-dialog-actions>-->
-  <!--<button class="mat-raised-button"(click)="close()">Close</button>-->
-  <!--<button class="mat-raised-button mat-primary"(click)="save()">Save</button>-->
-<!--</mat-dialog-actions>-->
+<mat-dialog-actions>
+  <button class="mat-raised-button"(click)="close()">Close</button>
+  <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions>

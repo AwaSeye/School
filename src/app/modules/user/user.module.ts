@@ -14,6 +14,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {SharedModule} from '../../shared/shared.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     UserRoutingModule,
     MatFormFieldModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   exports: [
     AccueilComponent,

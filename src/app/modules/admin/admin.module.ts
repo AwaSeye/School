@@ -14,6 +14,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatStepperModule} from '@angular/material/stepper';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatListModule} from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
+import { RepresentantComponent } from './representant/representant.component';
 
 
 @NgModule({
@@ -22,11 +29,11 @@ import {MatStepperModule} from '@angular/material/stepper';
     AdminComponent,
     EtablissementComponent,
     ModalDialogComponent,
+    RepresentantComponent,
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    SharedModule,
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
@@ -34,6 +41,11 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatIconModule,
     ReactiveFormsModule,
     MatStepperModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatListModule,
+    MatSelectModule
   ],
   exports: [
     AccueilAdministrateurComponent,
